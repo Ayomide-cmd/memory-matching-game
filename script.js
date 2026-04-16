@@ -2,8 +2,9 @@ const board = document.getElementById('game-board');
 const timerDisplay = document.getElementById('timer');
 const scoreDisplay = document.getElementById('score');
 const restartBtn = document.getElementById('restart');
+const splashScreen = document.getElementById('splash-screen');
+const startBtn = document.getElementById('start-btn');
 
-let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let matches = 0;
@@ -20,7 +21,6 @@ function initGame() {
     timerDisplay.textContent = seconds;
     scoreDisplay.textContent = matches;
     board.innerHTML = '';
-    
     
     gameIcons.sort(() => Math.random() - 0.5);
 
@@ -96,7 +96,9 @@ function resetBoard() {
     lockBoard = false;
 }
 
+startBtn.addEventListener('click', () => {
+    splashScreen.classList.add('hidden');
+    initGame();
+});
+
 restartBtn.addEventListener('click', initGame);
-
-
-initGame();

@@ -18,6 +18,52 @@ body {
     color: var(--text-dark);
 }
 
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    text-align: center;
+}
+
+.pixel-text {
+    font-size: 4rem;
+    color: var(--card-front);
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.sub-text {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 50px;
+}
+
+.press-start {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-weight: bold;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.hidden {
+    display: none !important;
+}
 .game-info {
     display: flex;
     gap: 2rem;
@@ -42,7 +88,7 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
-    perspective: 1000px; /* Essential for 3D flip */
+    perspective: 1000px; 
 }
 
 .card {
