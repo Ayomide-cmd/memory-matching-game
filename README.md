@@ -1,4 +1,5 @@
  Memory Match: Minimalist Edition
+ 
 A sleek and responsive memory matching game built with vanilla JavaScript and CSS. This project focuses on smooth state management and a refined minimalist pink aesthetic with a retro 90s flair.
 
 Project Overview
